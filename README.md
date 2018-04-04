@@ -10,3 +10,4 @@ Steps to run inside docker
 >> mvn clean package
 
 >>docker-compose up 
+

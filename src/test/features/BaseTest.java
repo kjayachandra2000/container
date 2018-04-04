@@ -47,8 +47,12 @@ public class BaseTest {
     }
 
     @AfterTest
-    public void tearDown() throws InterruptedException {
-        driver.quit();
+    public void tearDown() {
+        try {
+            driver.close();
+            driver.quit();
+        } catch (Exception ignore) {
+        }
     }
 
     private WebDriver getChromeDriver() {
